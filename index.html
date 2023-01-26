@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","Muse | Mist":280,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","Muse | Mist":280,"display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="YONG CHEN">
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/17/Hidden-Markov-Model/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/26/post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/brain-puzzle.webp">
@@ -180,7 +180,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/01/17/Hidden-Markov-Model/" class="post-title-link" itemprop="url">Hidden Markov Model</a>
+          <a href="/2023/01/26/post/" class="post-title-link" itemprop="url">post</a>
         </h2>
 
         <div class="post-meta-container">
@@ -191,107 +191,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-01-17 13:58:26" itemprop="dateCreated datePublished" datetime="2023-01-17T13:58:26-05:00">2023-01-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-23 00:41:52" itemprop="dateModified" datetime="2023-01-23T00:41:52-05:00">2023-01-23</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a><em>Background</em></h2><p>Hidden Markov Model is one of the Dynamic Model, which is a subclass of machine learning based on Bayesian Theory. </p>
-<p>Here we need to determine some important notations before moving forward.()</p>
-<ul>
-<li><p>Time Sequence:<br>$T &#x3D; {0, 1, …, N}$,$\forall t \in T$, $t$ is an non-negative integar.  </p>
-</li>
-<li><p>Observation Variable Set and Sequence: </p>
-<p>  Feasible Set for Observation:<br>  $V &#x3D; {v_0, v_1, …, v_N}$  </p>
-<p>  Obervation Sequence:<br>  $O &#x3D; {o_0, …, o_N}$, where $o_i$ represents the observation in $i$ time.  </p>
-</li>
-<li><p>Status Variabel Set and Sequence:   </p>
-<p>  Feasible Set for Stataus:<br>  $Q&#x3D;{q_0, q_1, …, q_n }$  </p>
-<p>  Status Seqence:<br>  $S&#x3D;{s_1, …, s_N}$, where $s_i$ is the $i^{th}$ status in the feasible set.</p>
-</li>
-<li><p>Transmision Matrix:   </p>
-<p>  A is a $n\times n$ Matrix donated as $\mathbf{A &#x3D; [a_{ij}]}$, here $a_{ij}$ is the probability of a transmission from status $q_i$ to $q_j$, where $q_i,q_j \in Q$. It can be definied as $a_{ij} &#x3D; P(a_{t+1} &#x3D; q_j| a_t &#x3D; q_i)$, $t \in T$ and $t &lt; N$. </p>
-</li>
-<li><p>Emission Matrix:    </p>
-<p>   B is a $n\times m$ Matrix donated as $\mathbf{B &#x3D; [b_{j}(k)]}$, here $b_{j}(k)$ is the probablity of the status $q_j$ emit an observation $o_k$, where $q_j \in Q$ and $o_k \in V$</p>
-</li>
-</ul>
-<h3 id="What-assumptions-x2F-scenarios-are-required"><a href="#What-assumptions-x2F-scenarios-are-required" class="headerlink" title="What assumptions&#x2F;scenarios are required"></a><em>What assumptions&#x2F;scenarios are required</em></h3><ul>
-<li>The Markov Assumption<br>  The next status is dependent on the current status.<br>  $$<br>  P(s_{t+1}|{s_1,o_2},{s_2,o_2},…,{s_t, o_t})&#x3D;P(s_{t+1}|s_t)<br>  $$</li>
-<li>The stationarity Assumption<br>  The state transition probabilities are independent of the actual time at when the transitions take place.<br>  $$<br>  P(q_{t_1+1} &#x3D; j|q_{t_1} &#x3D; i)&#x3D;P(q_{t_2+1} &#x3D; j|q_{t_2} &#x3D; i)<br>  $$</li>
-<li>The output Assumption<br>  The current observation is conditional on the current status.<br>  $$<br>  P(o_t|{o_1, …, o_{t-1}}, {s_1,…,s_t}) &#x3D; P(o_t|s_t)<br>  $$<br>  , which implies that<br>  $$<br>  P(O_{1, .., T}) &#x3D; \sum^T_{t&#x3D;1} P(o_t|s_t).<br>  $$</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/03/Zero-Knowledge/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/brain-puzzle.webp">
-      <meta itemprop="name" content="Yong Chen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YONG CHEN">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | YONG CHEN">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/01/03/Zero-Knowledge/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2023-01-03 14:06:36" itemprop="dateCreated datePublished" datetime="2023-01-03T14:06:36-05:00">2023-01-03</time>
+      <time title="Created: 2023-01-26 14:57:36" itemprop="dateCreated datePublished" datetime="2023-01-26T14:57:36-05:00">2023-01-26</time>
     </span>
 
   
@@ -330,7 +230,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/02/uniswap/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/26/Uniswap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/brain-puzzle.webp">
@@ -348,7 +248,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/01/02/uniswap/" class="post-title-link" itemprop="url">Uniswap</a>
+          <a href="/2023/01/26/Uniswap/" class="post-title-link" itemprop="url">Uniswap</a>
         </h2>
 
         <div class="post-meta-container">
@@ -359,14 +259,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2023-01-02 23:03:25" itemprop="dateCreated datePublished" datetime="2023-01-02T23:03:25-05:00">2023-01-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-26 11:31:18" itemprop="dateModified" datetime="2023-01-26T11:31:18-05:00">2023-01-26</time>
+      <time title="Created: 2023-01-26 14:57:12" itemprop="dateCreated datePublished" datetime="2023-01-26T14:57:12-05:00">2023-01-26</time>
     </span>
 
   
@@ -379,128 +272,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="AMM-Automated-Market-Makers"><a href="#AMM-Automated-Market-Makers" class="headerlink" title="AMM (Automated Market Makers)"></a>AMM (Automated Market Makers)</h2><p>A decentralized and permissionless algorithm that :  </p>
-<pre><code>1. works as a market marker but in an automated way
-2. is not governed by a single entity  
-3. stores assets in different place  
-4. anyone can use in anywhere. 
-</code></pre>
-<p>More formal speaking, a set of smart contracts that define how liquidity is managed.</p>
-<h2 id="AMM-in-Uniswap"><a href="#AMM-in-Uniswap" class="headerlink" title="AMM in Uniswap"></a>AMM in Uniswap</h2><h3 id="x3D-x3D-Version-2-x3D-x3D"><a href="#x3D-x3D-Version-2-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;Version 2&#x3D;&#x3D;"></a><em>&#x3D;&#x3D;Version 2&#x3D;&#x3D;</em></h3><p>Uniswap uses the Constant Funciton AMM, whose core function was formed as,<br>$$<br>x * y &#x3D; k<br>$$</p>
-<p>and trade functions is,</p>
-<p>$$<br>(x + r\Delta x) * (y - \Delta y) &#x3D; k.<br>$$</p>
-<p>$\textbf k$ is unchangable and cannot be zero<br>$\textbf x$ refers to token 0<br>$\textbf y$ refers to token 1<br>$\Delta$ represents the difference<br>$\textbf r$ is the trading fee&#x2F;rate, which is known and considered as a constant factor</p>
-<p>Spot Prices<br>Def: The prices only reflect current market prices and calculated by the amounts of reservces of tthe tokens.<br>$$<br>P_x &#x3D; \frac{y}{x}, P_y &#x3D; \frac{x}{y}<br>$$</p>
-<p>Trade Prices<br>Def: Based on the spot prices, add up the influence from supply and demand, high demand increases the price and vice versa.<br>$$<br>\Delta y &#x3D; y \cdot \frac{r\Delta x}{x + r\Delta x}\<br>\Delta x &#x3D; x \cdot \frac{\Delta y}{r(y-\Delta y)}<br>$$</p>
-<p>$$<br>\textit{A Example with Curve and Line Chart}<br>$$</p>
-<p>Issuess Remained in Version 2   </p>
-<ol>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h3 id="x3D-x3D-Version-3-x3D-x3D"><a href="#x3D-x3D-Version-3-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;Version 3&#x3D;&#x3D;"></a><em>&#x3D;&#x3D;Version 3&#x3D;&#x3D;</em></h3><p><strong>What</strong> and <strong>How</strong> it was imporved compared to last version</p>
-<p>This time, two new concepts are introducted:<br>$$<br>L &#x3D; \sqrt{xy}\<br>\sqrt{P} &#x3D; \sqrt{\frac{y}{x}}<br>$$</p>
-<p><strong>$L$</strong> is the amount of liquidity, note that $L^2 &#x3D; k$<br><strong>$P$</strong> is the spot price(same definition in the version 2)</p>
-<p>Since the property of market maker and liquidity are keeping the same definition. The k, their product is unchangeable. Which implies those equations: </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/21/ProbablityTheoryReivew/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/brain-puzzle.webp">
-      <meta itemprop="name" content="Yong Chen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YONG CHEN">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | YONG CHEN">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/21/ProbablityTheoryReivew/" class="post-title-link" itemprop="url">Gausian Distribution</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-12-21 11:00:00" itemprop="dateCreated datePublished" datetime="2022-12-21T11:00:00-05:00">2022-12-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-17 12:49:35" itemprop="dateModified" datetime="2023-01-17T12:49:35-05:00">2023-01-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Gausian-Distribution"><a href="#Gausian-Distribution" class="headerlink" title="Gausian Distribution"></a><strong>Gausian Distribution</strong></h2><p><strong>1-Dimension</strong>:</p>
-<p>$$<br>x \sim Gausian(\mu_{1\times 1}, \Sigma_{1\times1})<br>$$</p>
-<p>$$<br>p(x) &#x3D; \frac{1}{({2\pi})^\frac{1}{2}\sigma}exp[-\frac{(x-\mu)^2}{2 \sigma^2}]<br>$$</p>
-<p><strong>Multi-Dimension</strong>:</p>
-<p>$$<br>x \sim Gausian(\mu_{1\times p}, \Sigma_{p\times p})<br>$$</p>
-<p>$$<br>p(x) &#x3D; \frac{1}{({2\pi})^\frac{p}{2}{|\Sigma|}^p}exp[-\frac{1}{2}{(x-\mu)^T\Sigma^{-1}(x-\mu)}]<br>$$</p>
-<p><strong>Maximum Likelihood Estimation(MLE)</strong>:</p>
-<p>$$<br>\hat\mu_{MLE,unbiased} &#x3D; \frac{1}{N}\sum^N_{i&#x3D;1} x_i<br>$$</p>
-<p>$$<br>\hat\Sigma_{MLE,biased} &#x3D; \frac{1}{N}\sum^N_{i&#x3D;1}(x_i - \hat{\mu})^T(x_i-\hat{\mu})<br>$$</p>
-<p>$$<br>\hat\Sigma_{MLE,unbiased} &#x3D; \frac{1}{N-1}\sum^N_{i&#x3D;1}(x_i - \hat{\mu})^T(x_i-\hat{\mu})<br>$$</p>
-<p><em>If we use MLE to estimate the variance, $\hat{\sigma}$ would be $\frac{1}{N}$ smaller than $\sigma$</em>.</p>
-<p><strong>Geometric Meaning</strong>:</p>
-<p>Distane Metric:<br>$\Delta &#x3D; (x-\mu)^T \Sigma^{-1} (x-\mu)$, which is known as Mahalanobis Distance.<br>$d^2 &#x3D; (x-\mu)^T (x-\mu)$, which is basic Euclidean Distance.</p>
-<p>$\Delta &#x3D;&#x3D; d^2$ if and only if $\Sigma^{-1} &#x3D; 1$.</p>
-<p><em>Euclidean Distance</em>: It assumes the data following an isotropically Gaussian Dist., each feature contribute equally.<br><em>Mahalanobis Distance</em>: It will scale the values and measure the correlation among variables and relaxes the assumption of Euclidean Distance.</p>
-<p>If $p &gt;&#x3D; 2$ and $\Sigma$ is postive definite mastrix($\sigma_{i,j} &gt; 0,\forall i,j\in[1,p]$). Noticing that $\Sigma &#x3D; U^T \Lambda U$,where $U &#x3D; (u_1, u_2, …, u_p)_{p\times p}$ and $\Lambda &#x3D; diag(\lambda_1,\dots, \lambda_p)$. Consider $y_i&#x3D; (x-\mu)^Tu_i$, $\Delta &#x3D; \sum^p \frac{y_i^2}{\lambda_i}$. According to the definition and formula of Elliptic geometrics, once we have an given x, we can generate a contour line on the feasible set since both $\Sigma$ and $\mu$ are considered as known parameters at this stage.</p>
-<p><strong>Gausian Constraint</strong></p>
-<ol>
-<li>Limitation of Representive<br>In many cases, it is extremely hard to capture the patterns with only one Gaussian. For example, there may exist highly data-concentrated spaces, it may require a combination of multiple Gaussian to invovle.(GMM)</li>
-<li>Computation Complexity<br>In each Gaussian model, we need to compute and estimate $\frac{p(p+1)}{2}$ parameters in $\Sigma$ and $parameters$. Which as known as a $O(p^2)$ complexity.</li>
-</ol>
-
+          
       
     </div>
 
@@ -562,7 +334,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-17 12:58:29" itemprop="dateModified" datetime="2023-01-17T12:58:29-05:00">2023-01-17</time>
+      <time title="Modified: 2023-01-26 14:24:16" itemprop="dateModified" datetime="2023-01-26T14:24:16-05:00">2023-01-26</time>
     </span>
 
   
@@ -577,15 +349,14 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="Environment-Deloyment"><a href="#Environment-Deloyment" class="headerlink" title="Environment Deloyment"></a>Environment Deloyment</h2><p>Before moving onward, PLEASE make sure you reach the following conditions :</p>
 <pre><code>- Have a Git and Node.js with latest version
-    *You can check the version of by: 
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v <span class="comment">#for Node.js         </span></span><br><span class="line">$ git -v <span class="comment">#for Git</span></span><br></pre></td></tr></table></figure>
+    *You can check the version of by:``bash             $ node -v #for Node.js                      $ git -v #for Git             ``
 - A new folder which will be used as the root dictionary(refered as &quot;Blog&quot; later) for your Blog
 - A repo in git with a name ended with &#39;github.io&#39; (refered as &quot;github-link&quot; later)
 </code></pre>
 <h3 id="Hexo-Download-and-Installation"><a href="#Hexo-Download-and-Installation" class="headerlink" title="Hexo Download and Installation"></a>Hexo Download and Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ (sudo) npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
-
 <h3 id="Environment-Set-up"><a href="#Environment-Set-up" class="headerlink" title="Environment Set up"></a>Environment Set up</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ (sudo) ssh-keygen -t rsa -C /* Your log-in Email */</span><br></pre></td></tr></table></figure>
+
 <p>Copy the Key from &#x2F;.ssh&#x2F;id_ras.pub and create a new SSH Key in git</p>
 <h3 id="Create-Blog"><a href="#Create-Blog" class="headerlink" title="Create Blog"></a>Create Blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
@@ -754,6 +525,8 @@ Next: A popular easy-use theme model.
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
+
+  <a href="https://github.com/chenyo34" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
