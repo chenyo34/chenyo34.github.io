@@ -20,27 +20,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","Muse | Mist":280,"display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="AMM (Automated Market Makers)A decentralized and permissionless algorithm that : 1. works as a market marker but in an automated way 2. is not governed by a single entity 3. stores assets in different">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Uniswap">
-<meta property="og:url" content="http://example.com/Web3/uniswap.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Web3">
+<meta property="og:url" content="http://example.com/Web3/0.html">
 <meta property="og:site_name" content="YONG CHEN">
-<meta property="og:description" content="AMM (Automated Market Makers)A decentralized and permissionless algorithm that : 1. works as a market marker but in an automated way 2. is not governed by a single entity 3. stores assets in different">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-01-26T19:26:44.544Z">
-<meta property="article:modified_time" content="2023-01-26T19:25:04.180Z">
+<meta property="article:published_time" content="2023-01-27T05:32:33.000Z">
+<meta property="article:modified_time" content="2023-01-27T05:32:33.321Z">
 <meta property="article:author" content="Yong Chen">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/Web3/uniswap">
+<link rel="canonical" href="http://example.com/Web3/0">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://example.com/Web3/uniswap.html","path":"Web3/uniswap.html","title":"Uniswap"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"http://example.com/Web3/0.html","path":"Web3/0.html","title":"Web3"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Uniswap | YONG CHEN
+<title>Web3 | YONG CHEN
 </title>
   
 
@@ -102,7 +100,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -115,7 +113,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AMM-Automated-Market-Makers"><span class="nav-number">1.</span> <span class="nav-text">AMM (Automated Market Makers)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMM-in-Uniswap"><span class="nav-number">2.</span> <span class="nav-text">AMM in Uniswap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#x3D-x3D-Version-2-x3D-x3D"><span class="nav-number">2.1.</span> <span class="nav-text">&#x3D;&#x3D;Version 2&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#x3D-x3D-Version-3-x3D-x3D"><span class="nav-number">2.2.</span> <span class="nav-text">&#x3D;&#x3D;Version 3&#x3D;&#x3D;</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +163,7 @@
     
     <div class="post-block" lang="en"><header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">Uniswap
+<h1 class="post-title" itemprop="name headline">Web3
 </h1>
 
 <div class="post-meta-container">
@@ -177,30 +174,7 @@
       
       
       <div class="post-body">
-          <h2 id="AMM-Automated-Market-Makers"><a href="#AMM-Automated-Market-Makers" class="headerlink" title="AMM (Automated Market Makers)"></a>AMM (Automated Market Makers)</h2><p>A decentralized and permissionless algorithm that :</p>
-<pre><code>1. works as a market marker but in an automated way
-2. is not governed by a single entity
-3. stores assets in different place
-4. anyone can use in anywhere.
-</code></pre>
-<p>More formal speaking, a set of smart contracts that define how liquidity is managed.</p>
-<h2 id="AMM-in-Uniswap"><a href="#AMM-in-Uniswap" class="headerlink" title="AMM in Uniswap"></a>AMM in Uniswap</h2><h3 id="x3D-x3D-Version-2-x3D-x3D"><a href="#x3D-x3D-Version-2-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;Version 2&#x3D;&#x3D;"></a><em>&#x3D;&#x3D;Version 2&#x3D;&#x3D;</em></h3><p>Uniswap uses the Constant Funciton AMM, whose core function was formed as,</p>
-<p>$$<br>x * y &#x3D; k<br>$$</p>
-<p>and trade functions is,</p>
-<p>$$<br>(x + r\Delta x) * (y - \Delta y) &#x3D; k.<br>$$</p>
-<p>$\textbf k$ is unchangable and cannot be zero<br>$\textbf x$ refers to token 0<br>$\textbf y$ refers to token 1<br>$\Delta$ represents the difference<br>$\textbf r$ is the trading fee&#x2F;rate, which is known and considered as a constant factor</p>
-<p>Spot Prices<br>Def: The prices only reflect current market prices and calculated by the amounts of reservces of tthe tokens.</p>
-<p>$$<br>P_x &#x3D; \frac{y}{x}, P_y &#x3D; \frac{x}{y}<br>$$</p>
-<p>Trade Prices<br>Def: Based on the spot prices, add up the influence from supply and demand, high demand increases the price and vice versa.</p>
-<p>$$<br>\Delta y &#x3D; y \cdot \frac{r\Delta x}{x + r\Delta x}\<br>\Delta x &#x3D; x \cdot \frac{\Delta y}{r(y-\Delta y)}<br>$$</p>
-<p>$$<br>\textit{A Example with Curve and Line Chart}<br>$$</p>
-<p>Issuess Remained in Version 2</p>
-<h3 id="x3D-x3D-Version-3-x3D-x3D"><a href="#x3D-x3D-Version-3-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;Version 3&#x3D;&#x3D;"></a><em>&#x3D;&#x3D;Version 3&#x3D;&#x3D;</em></h3><p><strong>What</strong> and <strong>How</strong> it was imporved compared to last version</p>
-<p>This time, two new concepts are introducted:</p>
-<p>$$<br>L &#x3D; \sqrt{xy}\<br>\sqrt{P} &#x3D; \sqrt{\frac{y}{x}}<br>$$</p>
-<p><strong>$L$</strong> is the amount of liquidity, note that $L^2 &#x3D; k$<br><strong>$P$</strong> is the spot price(same definition in the version 2)</p>
-<p>Since the property of market maker and liquidity are keeping the same definition. The k, their product is unchangeable. Which implies those equations:</p>
-
+          
       </div>
       
       
